@@ -13,11 +13,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonConverter.setOnClickListener {
-            // Infered type
-            val euros = binding.editEuro.text.toString().toDouble()
-            //val dolars = String.format("%.2f", euros * 0.8)
-            val dolars = (euros * 0.8 * 100).roundToInt().toDouble() / 100
-            binding.textDolar.text = "Dolar: ${dolars} $"
+            if(binding.editEuro.text.toString().isEmpty()){
+                // Infered type
+                val euros = binding.editEuro.text.toString().toDouble()
+                //val dolars = String.format("%.2f", euros * 0.8)
+                val dolars = (euros * 0.8 * 100).roundToInt().toDouble() / 100
+                binding.textDolar.text = "Dolar: ${dolars} $"
+            }
+            else{
+                binding.textDolar.text = "Invalid value"
+            }
         }
     }
 }
