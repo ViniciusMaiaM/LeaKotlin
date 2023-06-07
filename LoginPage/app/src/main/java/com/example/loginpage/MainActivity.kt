@@ -2,6 +2,8 @@ package com.example.loginpage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.style.UnderlineSpan
 import android.util.Patterns
 import android.widget.Toast
 import com.example.loginpage.databinding.ActivityMainBinding
@@ -29,6 +31,13 @@ class MainActivity : AppCompatActivity() {
             else {
                 Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.forget.setOnClickListener{
+            Toast.makeText(this, "Route to create a new password screen", Toast.LENGTH_SHORT).show()
+        }
+        binding.first.setOnClickListener{
+            Toast.makeText(this, "Route to create a account screen", Toast.LENGTH_SHORT).show()
         }
     }
 
