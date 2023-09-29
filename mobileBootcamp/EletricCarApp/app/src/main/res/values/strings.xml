@@ -9,4 +9,7 @@
     <string name="power">Power</string>
     <string name="recharge">Recharge</string>
     <string name="recharge_value">23 Min</string>
+    <string name="price_kwh">Price Kwh</string>
+    <string name="traveled_km">Traveled Km</string>
+    <string name="calculate">Calculate</string>
 </resources>
